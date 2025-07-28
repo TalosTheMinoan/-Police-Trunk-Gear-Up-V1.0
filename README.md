@@ -43,14 +43,6 @@ Config.PoliceVehicles = {
         weapons = { "WEAPON_PISTOL", "WEAPON_STUNGUN" },
         armor = 75
     },
-    ["blazex5"] = {
-        weapons = { "WEAPON_CARBINERIFLE", "WEAPON_PISTOL", "WEAPON_STUNGUN" },
-        armor = 100
-    },
-    ["18raptor"] = {
-        weapons = { "WEAPON_CARBINERIFLE", "WEAPON_PISTOL", "WEAPON_STUNGUN" },
-        armor = 100
-    },
     ["police2"] = {
         weapons = { "WEAPON_PISTOL" },
         armor = 50
