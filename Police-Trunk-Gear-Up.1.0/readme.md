@@ -1,83 +1,82 @@
-# 🚓 Police Trunk Armory [ESX]
+# 🚓 Police Trunk Armory V1.0 [ESX]
 
-- Press **E** behind any police vehicle to gear up  
-- Works with **all vehicles**, no clipping or weird animations  
-- Trunk opens + realistic **sound** + smooth **animation**  
-- Gives weapons + **full armor**  
-- Cooldown between uses with time-based Greeklish notifications  
-- **Police job only** (ESX)
+Press **E** behind police vehicles to gear up.
 
----
+- Trunk opens + sound + animation  
+- Police job only (ESX)  
+- Anti-clipping system (no more getting inside the trunk)  
+- Cooldown system with time shown  
+- Localized: English, Greeklish, French, German  
 
-## 🆕 What's New in v1.0
+## 🆕 What's new in v1.0
 
-- ✅ Universal vehicle support — no more clipping into trunks
-- 🔊 Added trunk opening sound effect
-- 🧍 Smooth animation when grabbing gear
-- 🔄 Cooldown system with dynamic time messages (localized)
-- 🌍 Multilingual support (EN, GR, FR, DE)
-- 🚓 Works with any police-classified vehicle
-- 🛡️ Armor auto-applied when equipping gear
-
----
+- ✅ Works on **every vehicle**, no more clipping inside trunks  
+- 🌐 Added **full translations**: `en`, `gr` (Greeklish), `fr`, `de`  
+- ⏳ Cooldown feature to prevent spamming (You can turn it on or of in config.lua)  
+- 🔧 Full configuration via `config.lua` (no need to edit `client.lua`)  
+- 💾 Easy to add new vehicles with unique loadouts
 
 ## 📥 Install
 
-1. Drop the folder inside your `resources/`
-2. Add this to your `server.cfg`:
-   ```
-   start police-trunk-armory
-   ```
+1. Drop in your `resources/` folder  
+2. Add `start police-trunk-armory` to your `server.cfg`
 
----
+## ⚙️ Customize (`config.lua`)
 
-## ⚙️ Customize (`client.lua`)
-
-- **Vehicle types**:
+- **Language setting**:
   ```lua
-  policeCars = { "police", "police2", "police3", "fbi", "sheriff" }
-  ```
+  Config.Locale = 'en'
 
-- **Weapons to give**:
-  ```lua
-  weaponList = { "WEAPON_PISTOL", "WEAPON_CARBINERIFLE", "WEAPON_STUNGUN" }
-  ```
+- **Cooldown system**:
 
-- **Armor settings**:
-  ```lua
-  SetPedArmour(playerPed, 100)
-  ```
+1. Config.EnableCooldown = true
+2. Config.CooldownTime = 60
 
-- **Positioning (no clipping)**:
-  ```lua
-  GetOffsetFromEntityInWorldCoords(vehicle, 0.0, -2.2, 0.0)
-  ```
 
-- **Animation**:
-  ```lua
-  TaskPlayAnim(...)
-  ```
+- **Vehicle-specific gear**:
+Config.PoliceVehicles = {
+    ["police"] = {
+        weapons = { "WEAPON_CARBINERIFLE", "WEAPON_NIGHTSTICK" },
+        armor = 100
+    },
+    ["fbi"] = {
+        weapons = { "WEAPON_PISTOL", "WEAPON_STUNGUN" },
+        armor = 75
+    },
+    ["blazex5"] = {
+        weapons = { "WEAPON_CARBINERIFLE", "WEAPON_PISTOL", "WEAPON_STUNGUN" },
+        armor = 100
+    },
+    ["18raptor"] = {
+        weapons = { "WEAPON_CARBINERIFLE", "WEAPON_PISTOL", "WEAPON_STUNGUN" },
+        armor = 100
+    },
+    ["police2"] = {
+        weapons = { "WEAPON_PISTOL" },
+        armor = 50
+    }
+}
 
-- **Cooldown & translations** (check `locales/*.lua`):
-  - Greeklish, English, French, and German support included  
-  - Cooldown with how much time left in the message:
-    > `"Prepei na perimeneis {time}s prin ksana pareis eksoplismo!"`
 
----
+- **🌍 Translations**:
+Includes multi-language support via locales/*.lua:
 
-## 🌍 Translations
+en.lua – English
 
-Includes:
-- `en.lua` 🇺🇸
-- `gr.lua` 🇬🇷 *(Greeklish)*
-- `fr.lua` 🇫🇷
-- `de.lua` 🇩🇪
+gr.lua – Greek (Greeklish)
 
-Modify or add more inside the `locales/` folder.
+fr.lua – French
 
----
+de.lua – German
 
-## 👤 Credits
 
-Made with 💙 by **Kyriakos @ Talos**  
-Custom-built for immersive police roleplay.
+
+## Credits
+
+
+Made  by Kyriakos @ Talos
+
+Idea for per-vehicle gear system by **Hasidu**
+
+## Upcoming Features :
+🛠 Upcoming Feature: Add a menu to select specific gear items from the trunk — idea by **hasidu**
