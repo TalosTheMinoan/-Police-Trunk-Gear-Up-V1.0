@@ -71,4 +71,4 @@ Made  by Kyriakos @ Talos
 Idea for per-vehicle gear system by **Hasidu**
 
 ## Upcoming Features :
-🛠 Upcoming Feature: Add a menu to select specific gear items from the trunk — idea by **hasidu**
+🛠 Upcoming Feature: Add a menu to select specific gear items from the trunk  -- idea by **hasidu**
